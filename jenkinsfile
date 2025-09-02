@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/Naveen1-6/java-project-maven-new.git'
+                git branch: 'main', url: 'https://github.com/Naveen1-6/HOTSTAR-Project.git'
             }
         }
 
