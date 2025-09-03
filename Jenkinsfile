@@ -29,19 +29,4 @@ pipeline {
                 }
             }
         }
-
-        stage('Deploy Container') {
-            steps {
-                script {
-                    sh """
-                    # Remove old container if it exists
-                    docker rm -f ${CONTAINER_NAME} || true
-
-                    # Run new container
-                    docker run -d --name ${CONTAINER_NAME} -p 8085:8080 ${DOCKER_IMAGE}:${DOCKER_TAG}
-                    """
-                }
-            }
-        }
     }
-}
